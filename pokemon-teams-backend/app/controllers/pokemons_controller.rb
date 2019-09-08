@@ -1,6 +1,6 @@
 class PokemonsController < ApplicationController
 
-  def show
+  def show ##
     pokemon = Pokemon.find_by(id: params[:id])
     render json: pokemon, except: [:created_at, :updated_at]
   end
